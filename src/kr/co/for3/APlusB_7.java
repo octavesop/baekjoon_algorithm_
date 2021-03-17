@@ -3,19 +3,14 @@ import java.util.*;
 public class APlusB_7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int maxNum=-0;
-        int maxGrade = 0;
-        int[] arr = new int[9];
-        for(int i=0; i<9; i++) {
-            arr[i] = sc.nextInt();
-            System.out.println(arr[i]);
-            System.out.println(i);
-            if(i==1||maxNum<arr[i]) {
-                maxNum = arr[i];
-                maxGrade = i+1;
-            }
+        int num = sc.nextInt();
+        Scanner sc2 = new Scanner(System.in);
+
+        for(int i=1; i<=num; i++) {
+            int one = sc.nextInt();
+            int two = sc.nextInt();
+            System.out.print("Case #"+i+": ");
+            System.out.println(one+two);
         }
-        System.out.println(maxNum);
-        System.out.println(maxGrade);
     }
 }
