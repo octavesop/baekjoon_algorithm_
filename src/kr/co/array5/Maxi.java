@@ -1,6 +1,7 @@
-package kr.co.for3;
+package kr.co.array5;
+
 import java.util.*;
-public class APlusB_7 {
+public class Maxi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int maxNum=-0;
@@ -8,14 +9,12 @@ public class APlusB_7 {
         int[] arr = new int[9];
         for(int i=0; i<9; i++) {
             arr[i] = sc.nextInt();
-            System.out.println(arr[i]);
-            System.out.println(i);
-            if(i==1||maxNum<arr[i]) {
+            if(i==0||maxNum<arr[i]) {
                 maxNum = arr[i];
-                maxGrade = i+1;
+                maxGrade = i;
             }
         }
         System.out.println(maxNum);
-        System.out.println(maxGrade);
+        System.out.print(maxGrade+1);
     }
 }
