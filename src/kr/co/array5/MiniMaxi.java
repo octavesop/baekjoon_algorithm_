@@ -1,32 +1,21 @@
 package kr.co.array5;
-
-import java.util.Scanner;
-
+import java.util.*;
 public class MiniMaxi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        int ten;
-        int one;
-        int sum=num;
-        int count=0;
-        while (true)
-        {
-            ten = sum/10;
-            one = sum%10;
-            if(ten+one>=10) {
-                sum = (one*10)+(ten+one)-10;
+        int maxNum=-1000000;
+        int minNum = 1000000;
+        int[] arr = new int[num];
+        for(int i=0; i<num; i++) {
+            arr[i] = sc.nextInt();
+            if(i==0||maxNum<arr[i]) {
+                maxNum = arr[i];
             }
-            else {
-                sum = (one*10)+(ten+one);
-            }
-
-            count++;
-
-            if(sum==num) {
-                break;
+            if(i==0||minNum>arr[i]) {
+                minNum = arr[i];
             }
         }
-        System.out.println(count);
+        System.out.print(minNum+" "+maxNum);
     }
 }
