@@ -1,5 +1,5 @@
 package kr.co.if2;
-c
+import java.util.Scanner;
 public class YoonYear {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
