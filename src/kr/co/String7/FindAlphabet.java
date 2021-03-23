@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class FindAlphabet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[26]; // 영문자의 개수는 26개임
+        int[] arr = new int[26];
         String str = sc.next();
 
         for (int i = 0; i < str.length(); i++) {
@@ -22,7 +22,7 @@ public class FindAlphabet {
         for (int i = 0; i < 26; i++) {
             if (arr[i] > max) {
                 max = arr[i];
-                c = (char) (i + 65); // 대문자로 출력해야하므로 65를 더해준다.
+                c = (char) (i + 65);
             } else if (arr[i] == max) {
                 c = '?';
             }
